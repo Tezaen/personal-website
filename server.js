@@ -30,10 +30,12 @@ var db = firebase.firestore();
 const users = require('./routes/users');
 const auth = require('./routes/auth');
 const projects = require('./routes/projects');
+const jobs = require('./routes/jobs');
 
 app.use('/api/users', users);
 app.use('/api/auth', auth);
 app.use('/api/projects', projects);
+app.use('/api/jobs', jobs);
 
 const PORT = process.env.PORT || 5000
 

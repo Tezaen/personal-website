@@ -5,16 +5,17 @@ const firebase = require("firebase");
 var db = firebase.firestore();
 
 router.get('/', async (req, res) => {
+    
     try {
-        const projectsRef = db.collection('projects');
-        const snapshots = await projectsRef.get();
-        projects = [];
+        const jobsRef = db.collection('jobs');
+        const snapshots = await jobsRef.get();
+        jobs = [];
         snapshots.forEach(doc => {
             // console.log(doc.id, ' => ', doc.data());
-            projects.push(doc.data())
+            jobs.push(doc.data())
         })
 
-        res.json(projects);
+        res.json(jobs);
     } catch (error) {
         console.error(error);
     }
