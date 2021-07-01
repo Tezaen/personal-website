@@ -358,10 +358,11 @@ table th {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.7rem 2rem;
+  /* padding: 0.7rem 2rem; */
+  padding: 0.7rem 0.7rem 0.2rem 0.7rem;
   z-index: 1;
   width: 100%;
-  border-bottom: solid 1px var(--primary-color);
+  /* border-bottom: solid 1px var(--primary-color); */
   opacity: 0.9;
   margin-bottom: 1rem;
 }
@@ -439,4 +440,12 @@ table th {
     text-align: center;
     justify-content: center;
   }
+}
+
+.background-img {
+  background-image: url("https://i.pinimg.com/originals/ba/76/38/ba76386166a96aaeb9ebe182cf7fc46f.jpg");
+}
+
+.new-line {
+  white-space: pre-line
 }

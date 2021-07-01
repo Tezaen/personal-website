@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
             // console.log(doc.id, ' => ', doc.data());
             projects.push(doc.data())
         })
-
+        
         res.json(projects);
     } catch (error) {
         console.error(error);
