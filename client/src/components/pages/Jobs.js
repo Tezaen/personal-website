@@ -3,7 +3,9 @@ import Jobs from '../jobs/Jobs';
 
 const jobs = () => {
     return (
-        <Jobs />
+        <div className="non-transparent">
+            <Jobs />
+        </div>
     )
 }
 

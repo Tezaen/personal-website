@@ -6,9 +6,7 @@ const JobItem = ({ job }) => {
 
     const TimestampConvert = (timestamp) => {
         var t = new Date(Date.UTC(1970, 0, 1)); // Epoch
-        console.log("T:", t);
         t.setUTCSeconds(timestamp);
-        console.log("T 2:", t);
         var n = t.toLocaleDateString();
         return n;
     }

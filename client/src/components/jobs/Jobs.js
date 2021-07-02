@@ -6,7 +6,6 @@ import Spinner from '../layout/Spinner';
 
 const Jobs = () => {
     const jobContext = useContext(JobContext);
-    console.log("JOB CONTEXT", jobContext);
     const { jobs, getJobs, loading } = jobContext;
     useEffect(() => {
         getJobs();
