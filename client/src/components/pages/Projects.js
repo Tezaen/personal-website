@@ -3,7 +3,9 @@ import Projects from '../projects/Projects';
 
 const projects = () => {
     return (
-        <Projects />
+        <div className="non-transparent">
+            <Projects />
+        </div>
     )
 }
 

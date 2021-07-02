@@ -16,7 +16,7 @@ const App = () => {
     <JobState>
     <ProjectState>
       <Router>
-        <Fragment>
+        <div className="bg-img">
           <div className="background-img"></div>
           <Navbar />
           <div className="container">
@@ -27,7 +27,7 @@ const App = () => {
               <Route exact path='/jobs' component={Jobs} />
             </Switch>
           </div>
-        </Fragment>
+        </div>
       </Router>
     </ProjectState>
     </JobState>
