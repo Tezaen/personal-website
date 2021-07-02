@@ -14,9 +14,10 @@ router.get('/', async (req, res) => {
             // console.log(doc.id, ' => ', doc.data());
             jobs.push(doc.data())
         })
-
+        console.log(jobs);
         res.json(jobs);
     } catch (error) {
+        console.log("Something went wrong");
         console.error(error);
     }
 });
