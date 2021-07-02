@@ -5,8 +5,9 @@ const firebase = require("firebase");
 var db = firebase.firestore();
 
 router.get('/', async (req, res) => {
+    
     try {
-        const projectsRef = db.collection('projects');
+        const projectsRef = db.collection('projects').orderBy('datePosted', 'desc');
         const snapshots = await projectsRef.get();
         projects = [];
         snapshots.forEach(doc => {
