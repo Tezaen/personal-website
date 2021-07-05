@@ -6,6 +6,7 @@ import Projects from './components/pages/Projects';
 import Jobs from './components/pages/Jobs';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 // import './App2.css';
 
 import ProjectState from './context/project/ProjectState';
