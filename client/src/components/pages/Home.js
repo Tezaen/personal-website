@@ -1,13 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { Container, Row, Col } from 'react-bootstrap';
 
 const Home = () => {
     return (
-        <div className="container">
+        <Container>
             <div className="non-transparent">
-                <h1 className="text-center">Welcome to my website!</h1>
+                <h1 className="text-center display-4">Welcome to my website!</h1>
 
-                <p className="text-center new-line">
+                <p className="text-center new-line lead">
                     {
                         `
                             I am Roober Cruz! I am a software and web developer. My favorite languages
@@ -19,16 +20,16 @@ const Home = () => {
 
                     }   
                 </p>
-                <div className="row text-center">
-                    <div className="col">
+                <Row className="text-center">
+                    <Col>
                         <Link to='/projects'><button className="btn btn-light btn-block">Projects</button></Link>
-                    </div>
-                    <div className="col">
+                    </Col>
+                    <Col>
                         <  Link to='/jobs'><button className="btn btn-light btn-block">Experience</button></Link>
-                    </div>
-                </div>
+                    </Col>
+                </Row>
             </div>
-        </div>
+        </Container>
     )
 }
 

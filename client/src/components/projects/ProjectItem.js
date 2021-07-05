@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Card } from 'react-bootstrap';
 //import ProjectContext from '../../context/project/projectContext';
 
 const ProjectItem = ({ project }) => {
@@ -16,15 +17,17 @@ const ProjectItem = ({ project }) => {
     console.log(TimestampConvert(datePosted.seconds) );
     const datePostedConverted = TimestampConvert(datePosted.seconds);
     return (
-        <div>
-            <h1 className="">
-                { title }
-            </h1>
-            <p>
-                { desc }
-            </p>
-            Date Posted: { datePostedConverted }
-        </div>
+        <Card>
+            <Card.Body>
+                <Card.Title className="display-4 text-center">
+                    { title }
+                </Card.Title>
+                <Card.Text>
+                    { desc }
+                </Card.Text>
+                Date Posted: { datePostedConverted }
+            </Card.Body>
+        </Card>
     )
 }
 
