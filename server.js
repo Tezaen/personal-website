@@ -6,6 +6,9 @@ const app = express();
 // Required for side-effects
 require("firebase/firestore");
 
+// Init middleware
+app.use(express.json({ extended: false }));
+
 app.get('/', (req, res) => {
     res.send('Hello World')
 });

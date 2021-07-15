@@ -1,35 +1,36 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Card } from 'react-bootstrap';
+import TimestampToDate from '../../utils/timestamp'
 
 const JobItem = ({ job }) => {
-    const { title, desc, endDate, startDate, datePosted } = job
+    const { title, company, desc, endDate, startDate, datePosted } = job
 
-    const TimestampConvert = (timestamp) => {
-        var t = new Date(Date.UTC(1970, 0, 1)); // Epoch
-        t.setUTCSeconds(timestamp);
-        var n = t.toLocaleDateString();
-        return n;
-    }
-
-    const startDateConverted = TimestampConvert(startDate.seconds);
-    const endDateConverted = TimestampConvert(endDate.seconds);
-    const datePostedConverted = TimestampConvert(datePosted.seconds);
+    const startDateConverted = TimestampToDate(startDate.seconds);
+    const endDateConverted = TimestampToDate(endDate.seconds);
+    const datePostedConverted = TimestampToDate(datePosted.seconds);
 
     return (
-        <Card>
+        <Card className="my-2">
             <Card.Body>
                 <Card.Title className="display-4 text-center">
                     { title }
                 </Card.Title>
-                <Card.Subtitle className="lead">
-                    Start Date: { startDateConverted } {'\n'}
-                    End Date: { endDateConverted }
+                <Card.Subtitle className="lead my-1">
+                    <strong>{ company }</strong> 
+                </Card.Subtitle>
+                <Card.Subtitle className="lead my-1">
+                    <strong>Start Date:</strong> { startDateConverted }
+                </Card.Subtitle>
+                <Card.Subtitle className="lead my-1">
+                    <strong>End Date:</strong> { endDateConverted }
                 </Card.Subtitle>
                 <Card.Text>
                     { desc }
                 </Card.Text>
-                Date Posted: { datePostedConverted }
+                <Card.Text>
+                    Date Posted: { datePostedConverted }
+                </Card.Text>
             </Card.Body>
         </Card>
     )
