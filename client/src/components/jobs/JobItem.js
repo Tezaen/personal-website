@@ -13,11 +13,11 @@ const JobItem = ({ job }) => {
     return (
         <Card className="my-2">
             <Card.Body>
-                <Card.Title className="display-4 text-center">
+                <h1 className="text-center">
                     { title }
-                </Card.Title>
+                </h1>
                 <Card.Subtitle className="lead my-1">
-                    <strong>{ company }</strong> 
+                    <strong>Company:</strong> { company }
                 </Card.Subtitle>
                 <Card.Subtitle className="lead my-1">
                     <strong>Start Date:</strong> { startDateConverted }
