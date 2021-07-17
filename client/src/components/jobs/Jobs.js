@@ -19,17 +19,17 @@ const Jobs = () => {
 
     return (
         <Fragment>
-            { jobs !== null && !loading ? (<TransitionGroup>
+            { jobs !== null && !loading ? ( <> {/*<Transition> </TransitionGroup>*/}
                     { jobs.map( job => 
-                            <CSSTransition key={job.title} timeout={500} classNames="item">
-                                <JobItem job={job} />
-                            </CSSTransition>
+                            // <CSSTransition key={job.title} timeout={500} classNames="item">
+                                <JobItem job={job} key={job.title}/>
+                            // </CSSTransition>
                         )
                     }
-                </TransitionGroup>) : <Spinner />
+                </>) : <Spinner />
             }
         </Fragment>
     )
 }
 
-export default Jobs
+export default Jobs;

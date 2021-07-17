@@ -1,13 +1,18 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Image } from 'react-bootstrap';
+import Picture from '../layout/img/roober_cruz_san_fran.jpg';
 
 const Home = () => {
     return (
         <Container>
             <div className="non-transparent">
-                <h1 className="text-center display-4">Welcome to my website!</h1>
+                <h1 className="text-center display-4 pt-5">Welcome to my website!</h1>
 
+                <div className="text-center">
+                    <Image src={ Picture } roundedCircle/>
+                </div>
+                
                 <p className="text-center new-line lead">
                     {
                         `

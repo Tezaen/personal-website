@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Fragment } from 'react';
 import { Card, Row, Col } from 'react-bootstrap';
 
 const Education = () => {
+    
+    useEffect(() => {
+        document.title = 'Education - Roober Cruz';
+        // eslint-disable-next-line
+    }, []);
+
     return (
         <div className="non-transparent">
             <h1 className="text-center display-4 pt-4 pb-4">Education</h1>
