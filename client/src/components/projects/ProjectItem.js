@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Card } from 'react-bootstrap';
-import TimestampToDate from '../../utils/timestamp'
+import TimestampToDate from '../../utils/timestamp';
+import ImageList from '../images/Images';
 //import ProjectContext from '../../context/project/projectContext';
 
 const ProjectItem = ({ project }) => {
     // destructure the project object
-    const { title, desc, datePosted, techs } = project;
+    const { title, desc, datePosted, techs, images } = project;
 
     // console.log("Title",title);
     // console.log("Desc", desc);
@@ -15,23 +16,37 @@ const ProjectItem = ({ project }) => {
 
     const datePostedConverted = TimestampToDate(datePosted.seconds);
     return (
-        <Card className="my-2">
+        <Card className="my-2 mx-5">
             <Card.Body>
-                <Card.Title className="display-4 text-center">
+                <h1 className="text-center">
                     { title }
-                </Card.Title>
-                <Card.Text>
-                    { desc }
+                </h1>
+                <Card.Text dangerouslySetInnerHTML={{__html: desc}}>
+                    
                 </Card.Text>
+                {/* <Card.Text>  I would actually just use this instead of dangerouslySetInnerHtml
+                    { desc }        as it is vulnerable to cross site SCRIPTING (XSS)
+                                maybe use another node package. For now it will stick
+                </Card.Text> */}
                 {
                     techs !== undefined ? <Card.Text>
                         Technologies: {
-                            techs.map(technology => 
-                                <span class="border mx-2 px-2">{technology}</span>
-                                )
+                            techs.map(tech => 
+                                <span className="border mx-2 px-2" key={tech}>{tech}</span>
+                            )
                         }
                     </Card.Text> : <></>
                 }
+                {
+                    // images !== undefined ? <div>
+                    //     Images: {
+                    //         images.map(image => 
+                    //             <img src={image} key={image}/>
+                    //         )
+                    //     }
+                    // </div> : <></>   This is the old way of displaying images
+                }
+                <ImageList images={images}/>
                 Date Posted: { datePostedConverted }
             </Card.Body>
         </Card>

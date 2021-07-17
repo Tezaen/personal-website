@@ -1,12 +1,18 @@
-import React from 'react';
-import Projects from '../projects/Projects';
+import React, { useEffect } from 'react';
+import ProjectsList from '../projects/Projects';
 
-const projects = () => {
+const Projects = () => {
+    useEffect(() => {
+        document.title = 'Projects - Roober Cruz';
+        // eslint-disable-next-line
+    }, []);
+
     return (
         <div className="non-transparent">
-            <Projects />
+            <h1 className="text-center display-4 pt-4 pb-4">Projects</h1>
+            <ProjectsList />
         </div>
     )
 }
 
-export default projects
+export default Projects

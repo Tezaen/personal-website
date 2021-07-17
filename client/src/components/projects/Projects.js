@@ -20,14 +20,15 @@ const Projects = () => {
 
     return (
         <Fragment>
-            { projects !== null && !loading ? (<TransitionGroup>
-                    { projects.map(project => 
-                            <CSSTransition key={project.title} timeout={500} classNames="item">
-                                <ProjectItem project={project} />
-                            </CSSTransition>
+            { projects !== null && !loading ? <>  {/* <TransitionGroup></TransitionGroup> */}
+                    { 
+                        projects.map(project => 
+                            // <CSSTransition key={project.title} timeout={500} classNames="item">
+                                <ProjectItem project={project} key={project.title}/>
+                            // </CSSTransition>
                         )
                     }
-                </TransitionGroup>) : <Spinner />
+                </> : <Spinner />
             }
         </Fragment>
     ) // projects.map(project => <ProjectItem project={project} />)
