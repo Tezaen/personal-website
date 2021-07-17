@@ -12,14 +12,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import ProjectState from './context/project/ProjectState';
 import JobState from './context/job/JobState';
+import Footer from './components/layout/Footer';
 
 const App = () => {
   return (
     <JobState>
     <ProjectState>
       <Router>
-        <div className="bg-img">
-          <div className="background-img"></div>
+        <div className="background-img">
           <Navbar />
           <div className="container">
             <Switch>
@@ -30,6 +30,7 @@ const App = () => {
               <Route exact path='/about' component={About} />
             </Switch>
           </div>
+          <Footer />
         </div>
       </Router>
     </ProjectState>

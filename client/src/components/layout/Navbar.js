@@ -6,7 +6,7 @@ import { Container } from 'react-bootstrap';
 
 const Navbar = ({ title, icon }) => {
     return (
-        <BootStrapNavbar bg="light" className="px-5">
+        <BootStrapNavbar bg="light" className="px-5 py-3">
             <Container fluid>
                 <Link className="navbar-brand" to="/"><i className={icon} /> Roober Cruz</Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
