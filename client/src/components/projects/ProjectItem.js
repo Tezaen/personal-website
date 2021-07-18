@@ -21,10 +21,10 @@ const ProjectItem = ({ project }) => {
                 </Card.Text>
                 <Card.Text className="mb-1">
                     {
-                        githubUrl !== null ? <><a href={githubUrl}  className="mr-3">Github</a></> : <></>
+                        githubUrl !== null ? <><a href={githubUrl}  className="mr-3" target="_blank" rel="noopener noreferrer">Github</a></> : <></>
                     }
                     {
-                        siteUrl !== null ? <><a href={siteUrl} className="mr-3">Website</a></> : <></>
+                        siteUrl !== null ? <><a href={siteUrl} className="mr-3" target="_blank" rel="noopener noreferrer">Website</a></> : <></>
                     }
                 </Card.Text>
                 {/* <Card.Text>  I would actually just use this instead of dangerouslySetInnerHtml
