@@ -18,7 +18,7 @@ const Home = () => {
                     <Image src={ Picture } roundedCircle/>
                 </div>
                 
-                <p className="text-center new-line lead mt-5 mb-5">
+                <p className="text-center new-line lead mt-5 mb-5 ml-5 mr-5">
                     I am Roober Cruz! I am a recent graduate from California State University and the CSin3 program
                     with a Bachelor's Degree in Computer Science with a concentration in Software Engineering. 
                     Looking to learn as much as I can about software development and programming. Searching for opportunities

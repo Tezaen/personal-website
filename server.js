@@ -1,6 +1,5 @@
 const express = require('express');
 const firebase = require("firebase");
-
 const app = express();
 
 // Required for side-effects
@@ -13,16 +12,14 @@ app.get('/', (req, res) => {
     res.send('Hello World')
 });
 
-let firebaseApiKey;
-let firebaseAppId;
-
 if (process.env.NODE_ENV !== 'production') {
-    firebaseApiKey = process.env.FIREBASE_API_KEY_LOCAL;
-    firebaseAppId = process.env.FIREBASE_APP_ID_LOCAL;
-} else {
-    firebaseApiKey = process.env.FIREBASE_API_KEY
-    firebaseAppId = process.env.FIREBASE_APP_ID
+    require('dotenv').config();
 }
+// console.log(process.env.TEST);
+// console.log("process env fb api key:", process.env.FIREBASE_API_KEY);
+// console.log("process env fb ID:", process.env.FIREBASE_APP_ID);
+firebaseApiKey = process.env.FIREBASE_API_KEY
+firebaseAppId = process.env.FIREBASE_APP_ID
 
 // Firebase config
 const firebaseConfig = {
