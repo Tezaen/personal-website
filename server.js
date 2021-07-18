@@ -1,6 +1,7 @@
 const express = require('express');
 const firebase = require("firebase");
 const app = express();
+const path = require('path');
 
 // Required for side-effects
 require("firebase/firestore");
@@ -8,13 +9,10 @@ require("firebase/firestore");
 // Init middleware for body parsing
 app.use(express.json({ extended: false }));
 
-app.get('/', (req, res) => {
-    res.send('Hello World')
-});
-
 if (process.env.NODE_ENV !== 'production') {
     require('dotenv').config();
 }
+
 // console.log(process.env.TEST);
 // console.log("process env fb api key:", process.env.FIREBASE_API_KEY);
 // console.log("process env fb ID:", process.env.FIREBASE_APP_ID);
@@ -47,6 +45,15 @@ app.use('/api/users', users);
 app.use('/api/auth', auth);
 app.use('/api/projects', projects);
 app.use('/api/jobs', jobs);
+
+// Serve static assets in prod
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static('client/build'));
+
+    app.get('*', (req, res) => 
+        res.sendFile(path.resolve(__dirname, 'client', 'build','index.html'))
+    );
+}
 
 const PORT = process.env.PORT || 5000
 
