@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom';
 import { Container, Row, Col, Image } from 'react-bootstrap';
 import Picture from '../layout/img/roober_cruz_san_fran.jpg';
 
 const Home = () => {
+    useEffect(() => {
+        document.title = 'Roober Cruz';
+        // eslint-disable-next-line
+    }, [])
+
     return (
         <Container>
             <div className="non-transparent">
@@ -13,16 +18,13 @@ const Home = () => {
                     <Image src={ Picture } roundedCircle/>
                 </div>
                 
-                <p className="text-center new-line lead">
-                    {
-                        `
-                            I am Roober Cruz! I am a software and web developer. My favorite languages
-                            would be Python and Javascript. I am currently learning React and React Hooks.
-                            This website is also a playground to test stuff as mentioned in the About page.
-
-                            Feel free to look around! Buttons to my education, projects, and job experience are listed below
-                        `
-                    }   
+                <p className="text-center new-line lead mt-5 mb-5">
+                    I am Roober Cruz! I am a recent graduate from California State University and the CSin3 program
+                    with a Bachelor's Degree in Computer Science with a concentration in Software Engineering. 
+                    Looking to learn as much as I can about software development and programming. Searching for opportunities
+                    to grow and make it in the world.
+                    <br /><br />
+                    Feel free to look around! Buttons to my education, projects, and job experience are listed below
                 </p>
                 <Row className="text-center px-1">
                     <Col>
@@ -36,9 +38,66 @@ const Home = () => {
                     </Col>
                 </Row>
                 
-                {/* <div className="text-center new-line lead pt-5">
-                    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-                </div> */}
+                {/* Temporary TODO: fix footer*/}
+                <div className="container mt-5">
+                    <div className="row text-center">
+                        <div className="col">
+                            <h1> My Links and Contact Info </h1>
+                        </div>
+                    </div>
+                </div>
+                <div className="container py-5">
+                    <div className="row text-center">
+                        <div className="col">
+                            <div className="row">
+                                <div className="col">
+                                    <a href="https://github.com/Tezaen/" target="_blank" rel="noopener noreferrer">
+                                        <i className="fab fa-github fa-3x"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="col">
+                                    <a href="https://github.com/Tezaen/" target="_blank" rel="noopener noreferrer">
+                                        <h3>Tezaen</h3>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col">
+                            <div className="row">
+                                <div className="col">
+                                    <a href="https://www.linkedin.com/in/roober-cruz/" target="_blank" rel="noopener noreferrer">
+                                        <i className="fab fa-linkedin fa-3x"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="col">
+                                    <a href="https://www.linkedin.com/in/roober-cruz/" target="_blank" rel="noopener noreferrer">
+                                        <h3>Roober Gerard Cruz</h3>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col">
+                            <div className="row">
+                                <div className="col">
+                                    <a href="mailto:roober.cruz@gmail.com" target="_blank" rel="noopener noreferrer">
+                                        <i className="fas fa-envelope-square fa-3x"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="col">
+                                    <a href="mailto:roober.cruz@gmail.com" target="_blank" rel="noopener noreferrer">
+                                        <h3>roober.cruz@gmail.com</h3>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </Container>
     )

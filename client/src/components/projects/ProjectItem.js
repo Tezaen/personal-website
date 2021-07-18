@@ -46,7 +46,7 @@ const ProjectItem = ({ project }) => {
                     //     }
                     // </div> : <></>   This is the old way of displaying images
                 }
-                <ImageList images={images}/>
+                {/* <ImageList images={images}/> */}
                 Date Posted: { datePostedConverted }
             </Card.Body>
         </Card>

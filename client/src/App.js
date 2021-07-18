@@ -30,7 +30,7 @@ const App = () => {
               <Route exact path='/about' component={About} />
             </Switch>
           </div>
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </Router>
     </ProjectState>
