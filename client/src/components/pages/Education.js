@@ -12,7 +12,7 @@ const Education = () => {
     return (
         <div className="non-transparent">
             <h1 className="text-center display-4 pt-4 pb-4">Education</h1>
-            <hr className="mt-2 mb-5"/>
+            
             <div className="my-5">
                 <h1 className="text-center">California State University, Monterey Bay</h1>
                 <Row className="lead my-1">
@@ -32,7 +32,7 @@ const Education = () => {
                     </Col>
                 </Row>
             </div>
-            <div className="my-2">
+            <div className="my-3">
                 <h1 className="text-center">Hartnell Community College</h1>
                 <Row className="lead my-1">
                     <Col className="text-left mx-2">
@@ -51,12 +51,15 @@ const Education = () => {
                     </Col>
                 </Row>
             </div>
-            <div className="my-2">
+            <div className="my-3">
                 <h1 className="text-center">CSin3</h1>
                 <p className="lead ml-2 mr-0">
                 CSin3 is a joint program between Hartnell Community College and California State University, Monterey Bay,
                 located in Monterey County. It is an accelerated cohort-based program that allows students in the cohorts
-                to earn their Computer Science Bachelor's Degrees in approximately 3 years.  
+                to earn their Computer Science Bachelor's Degrees in approximately 3 years. <br />
+                <a href="https://csin3.com/" target="_blank" rel="noopener noreferrer">
+                    More here.
+                </a>
                 </p>
             </div>
         </div>

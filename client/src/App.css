@@ -1,43 +1,42 @@
 .root {
-    display: flex;
+  display: flex;
 }
 
 body {
-    background-image: url("https://i.pinimg.com/originals/ba/76/38/ba76386166a96aaeb9ebe182cf7fc46f.jpg");
-    background-repeat: repeat-y;
+  background-image: url('./components/layout/bg-blue.jpg');
+  background-repeat: repeat-y;
 }
 
 body > #root > div {
-    height: 100vh;
-}
-
-.bg-img {
-    /* background-image: url("https://i.pinimg.com/originals/ba/76/38/ba76386166a96aaeb9ebe182cf7fc46f.jpg");
-    background-repeat: repeat-y; */
+  height: 100vh;
 }
 
 .non-transparent {
-    background: rgba(255, 255, 255, 0.9);
-    opacity: 1;
-    padding-bottom: 5%;
+  background: rgba(255, 255, 255, 0.9);
+  opacity: 1;
+  padding-bottom: 5%;
 }
 
 .item-enter {
-    opacity: 0;
+  opacity: 0;
 }
 .item-enter-active {
-opacity: 1;
-transition: opacity 1000ms ease-in;
+  opacity: 1;
+  transition: opacity 1000ms ease-in;
 }
 
 .btn:hover {
-    box-shadow: 0 0 0 2pt rgb(0, 0, 0) !important; /* box shadow https://stackoverflow.com/questions/5394116/outline-radius */
+  box-shadow: 0 0 0 2pt rgb(36, 228, 252) !important; /* box shadow https://stackoverflow.com/questions/5394116/outline-radius */
 }
 
 .nav-item {
-    transition: box-shadow 250ms
+  transition: box-shadow 250ms;
 }
 
 .nav-item:hover {
-    box-shadow: 0 0 0 2pt rgb(0, 0, 0) !important; /* box shadow https://stackoverflow.com/questions/5394116/outline-radius */
+  box-shadow: 0 0 0 2pt rgb(36, 228, 252) !important; /* box shadow https://stackoverflow.com/questions/5394116/outline-radius */
+}
+
+a {
+  color: rgb(36, 228, 252) !important;
 }

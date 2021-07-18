@@ -1,26 +1,34 @@
 const express = require('express');
 const firebase = require("firebase");
-
 const app = express();
 
 // Required for side-effects
 require("firebase/firestore");
 
-// Init middleware
+// Init middleware for body parsing
 app.use(express.json({ extended: false }));
 
 app.get('/', (req, res) => {
     res.send('Hello World')
 });
 
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').config();
+}
+// console.log(process.env.TEST);
+// console.log("process env fb api key:", process.env.FIREBASE_API_KEY);
+// console.log("process env fb ID:", process.env.FIREBASE_APP_ID);
+firebaseApiKey = process.env.FIREBASE_API_KEY
+firebaseAppId = process.env.FIREBASE_APP_ID
+
 // Firebase config
 const firebaseConfig = {
-    apiKey: "AIzaSyCZMDrBu0eFgW9sW0-JyvN5v8XyA2UQS2A",
+    apiKey: firebaseApiKey,
     authDomain: "personal-website-tezaen.firebaseapp.com",
     projectId: "personal-website-tezaen",
     storageBucket: "personal-website-tezaen.appspot.com",
     messagingSenderId: "449594421594",
-    appId: "1:449594421594:web:d42900dec9501609270363",
+    appId: firebaseAppId,
     measurementId: "G-YRM91F1XXQ"
 };
 

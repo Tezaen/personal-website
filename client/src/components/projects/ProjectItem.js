@@ -3,17 +3,12 @@ import PropTypes from 'prop-types';
 import { Card } from 'react-bootstrap';
 import TimestampToDate from '../../utils/timestamp';
 import ImageList from '../images/Images';
-//import ProjectContext from '../../context/project/projectContext';
 
 const ProjectItem = ({ project }) => {
     // destructure the project object
-    const { title, desc, datePosted, techs, images } = project;
+    const { title, desc, datePosted, techs, images, githubUrl, siteUrl } = project;
 
-    // console.log("Title",title);
-    // console.log("Desc", desc);
-    // console.log("Date Posted", datePosted);
-    // console.log("Techs used", techs);
-
+    console.log("title:", title, githubUrl, siteUrl);
     const datePostedConverted = TimestampToDate(datePosted.seconds);
     return (
         <Card className="my-2 mx-5">
@@ -21,8 +16,16 @@ const ProjectItem = ({ project }) => {
                 <h1 className="text-center">
                     { title }
                 </h1>
-                <Card.Text dangerouslySetInnerHTML={{__html: desc}}>
+                <Card.Text className="mb-1" dangerouslySetInnerHTML={{__html: desc}}>
                     
+                </Card.Text>
+                <Card.Text className="mb-1">
+                    {
+                        githubUrl !== null ? <><a href={githubUrl}  className="mr-3">Github</a></> : <></>
+                    }
+                    {
+                        siteUrl !== null ? <><a href={siteUrl} className="mr-3">Website</a></> : <></>
+                    }
                 </Card.Text>
                 {/* <Card.Text>  I would actually just use this instead of dangerouslySetInnerHtml
                     { desc }        as it is vulnerable to cross site SCRIPTING (XSS)
@@ -46,7 +49,7 @@ const ProjectItem = ({ project }) => {
                     //     }
                     // </div> : <></>   This is the old way of displaying images
                 }
-                <ImageList images={images}/>
+                {/* <ImageList images={images}/> */}
                 Date Posted: { datePostedConverted }
             </Card.Body>
         </Card>

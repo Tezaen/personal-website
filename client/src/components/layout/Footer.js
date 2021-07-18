@@ -1,45 +1,10 @@
-import React, { useEffect } from 'react'
-import { Link } from 'react-router-dom';
-import { Container, Row, Col, Image } from 'react-bootstrap';
-import Picture from '../layout/img/roober_cruz_san_fran.jpg';
+import React from 'react';
 
-const Home = () => {
-    useEffect(() => {
-        document.title = 'Roober Cruz';
-        // eslint-disable-next-line
-    }, [])
-
+const Footer = () => {
     return (
-        <Container>
-            <div className="non-transparent">
-                <h1 className="text-center display-4 pt-5"><strong>Roober Cruz</strong></h1>
-
-                <div className="text-center">
-                    <Image src={ Picture } roundedCircle/>
-                </div>
-                
-                <p className="text-center new-line lead mt-5 mb-5 ml-5 mr-5">
-                    I am Roober Cruz! I am a recent graduate from California State University and the CSin3 program
-                    with a Bachelor's Degree in Computer Science with a concentration in Software Engineering. 
-                    Looking to learn as much as I can about software development and programming. Searching for opportunities
-                    to grow and make it in the world.
-                    <br /><br />
-                    Feel free to look around! Buttons to my education, projects, and job experience are listed below
-                </p>
-                <Row className="text-center px-1">
-                    <Col>
-                        <  Link to='/education'><button className="btn btn-light btn-block">Education</button></Link>
-                    </Col>
-                    <Col>
-                        <Link to='/projects'><button className="btn btn-light btn-block">Projects</button></Link>
-                    </Col>
-                    <Col>
-                        <  Link to='/jobs'><button className="btn btn-light btn-block">Experience</button></Link>
-                    </Col>
-                </Row>
-                
-                {/* Temporary TODO: fix footer*/}
-                <div className="container mt-5">
+        <div id="foot">
+            <footer className="bd-footer py-5 pb-5 mt-5 bg-light" >
+                <div className="container">
                     <div className="row text-center">
                         <div className="col">
                             <h1> My Links and Contact Info </h1>
@@ -98,9 +63,9 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-            </div>
-        </Container>
+            </footer>
+        </div>
     )
 }
 
-export default Home
+export default Footer
