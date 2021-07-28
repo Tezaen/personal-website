@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
 
 const About = () => {
     useEffect(() => {
@@ -8,8 +7,8 @@ const About = () => {
     }, []);
 
     return (
-        <Container>
-            <div className="non-transparent">
+        <div className="container">
+            <div className="non-transparent pagee">
                 <h1 className="text-center display-4 pt-5 pb-5">About the website</h1>
                 <p className="text-center new-line lead px-5">
                     This is my personal website that is fullstack with express for backend and react for frontend.
@@ -20,7 +19,7 @@ const About = () => {
                     Version 1.0.0
                 </h5>
             </div>
-        </Container>
+        </div>
     )
 }
 

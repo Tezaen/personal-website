@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Card } from 'react-bootstrap';
 import TimestampToDate from '../../utils/timestamp'
 
 const JobItem = ({ job }) => {
@@ -40,7 +39,7 @@ const JobItem = ({ job }) => {
 }
 
 JobItem.propTypes = {
-    project: PropTypes.object.isRequired
+    job: PropTypes.object.isRequired
 }
 
 export default JobItem

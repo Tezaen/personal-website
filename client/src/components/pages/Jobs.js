@@ -8,7 +8,7 @@ const Jobs = () => {
     }, []);
 
     return (
-        <div className="non-transparent">
+        <div className="non-transparent pagee">
             <h1 className="text-center display-4 pt-4 pb-4">Experience</h1>
             <JobsList />
         </div>

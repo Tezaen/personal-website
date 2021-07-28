@@ -1,8 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { Navbar as BootStrapNavbar } from 'react-bootstrap';
-import { Container } from 'react-bootstrap';
 
 const Navbar = ({ title, icon }) => {
     return (

@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Card } from 'react-bootstrap';
 import TimestampToDate from '../../utils/timestamp';
 import ImageList from '../images/Images';
 
@@ -8,7 +7,6 @@ const ProjectItem = ({ project }) => {
     // destructure the project object
     const { title, desc, datePosted, techs, images, githubUrl, siteUrl } = project;
 
-    console.log("title:", title, githubUrl, siteUrl);
     const datePostedConverted = TimestampToDate(datePosted.seconds);
     return (
         <div className="card my-2 mx-5">

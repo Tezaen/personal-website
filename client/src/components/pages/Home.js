@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom';
-import { Container, Row, Col, Image } from 'react-bootstrap';
 import Picture from '../layout/img/roober_cruz_san_fran.jpg';
 
 const Home = () => {
@@ -10,12 +9,12 @@ const Home = () => {
     }, [])
 
     return (
-        <Container>
-            <div className="non-transparent">
+        <div className="container">
+            <div className="non-transparent pagee">
                 <h1 className="text-center display-4 pt-5"><strong>Roober Cruz</strong></h1>
 
                 <div className="text-center">
-                    <Image src={ Picture } roundedCircle/>
+                    <img src={ Picture } className="rounded-circle" />
                 </div>
                 
                 <p className="text-center new-line lead mt-5 mb-5 ml-5 mr-5">
@@ -26,17 +25,17 @@ const Home = () => {
                     <br /><br />
                     Feel free to look around! Buttons to my education, projects, and job experience are listed below
                 </p>
-                <Row className="text-center px-1">
-                    <Col>
-                        <  Link to='/education'><button className="btn btn-light btn-block">Education</button></Link>
-                    </Col>
-                    <Col>
+                <div className="row text-center px-1">
+                    <div className="col">
+                        <Link to='/education'><button className="btn btn-light btn-block">Education</button></Link>
+                    </div>
+                    <div className="col">
                         <Link to='/projects'><button className="btn btn-light btn-block">Projects</button></Link>
-                    </Col>
-                    <Col>
-                        <  Link to='/jobs'><button className="btn btn-light btn-block">Experience</button></Link>
-                    </Col>
-                </Row>
+                    </div>
+                    <div className="col">
+                        <Link to='/jobs'><button className="btn btn-light btn-block">Experience</button></Link>
+                    </div>
+                </div>
                 
                 {/* Temporary TODO: fix footer*/}
                 <div className="container mt-5">
@@ -99,7 +98,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-        </Container>
+        </div>
     )
 }
 
