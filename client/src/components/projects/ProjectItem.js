@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import TimestampToDate from '../../utils/timestamp';
-import ImageList from '../images/Images';
+import { Carousel } from 'react-bootstrap';
 
 const ProjectItem = ({ project }) => {
     // destructure the project object
@@ -38,17 +38,26 @@ const ProjectItem = ({ project }) => {
                         }
                     </div> : <></>
                 }
-                {
-                    // images !== undefined ? <div>
-                    //     Images: {
-                    //         images.map(image => 
-                    //             <img src={image} key={image}/>
-                    //         )
-                    //     }
-                    // </div> : <></>   This is the old way of displaying images
-                }
-                {/* <ImageList images={images}/> */}
                 Date Posted: { datePostedConverted }
+                {
+                    images.length > 0 ? <p>Images: </p> : <></>
+                }
+                {
+                    images !== undefined ? 
+                    <Carousel  fade>
+                        {
+                            images.map(image => 
+                                <Carousel.Item>
+                                    <img src={image} key={image} width="100%" height="100%"/>
+                                    <Carousel.Caption>
+                                        <h3>{title}</h3>
+                                    </Carousel.Caption>
+                                </Carousel.Item>
+                            )
+                        }
+                    </Carousel> : <></>   /* This is the old way of displaying images */
+                }
+                
             </div>
         </div>
     )

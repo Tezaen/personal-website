@@ -15,6 +15,10 @@ body {
   z-index: 1 !important;
 }
 
+#root {
+  height: 100vh;
+}
+
 /* body > #root > div {
   height: 100vh;
 } */
@@ -47,4 +51,8 @@ body {
 
 a {
   color: rgb(36, 228, 252) !important;
+}
+
+.text-stroke {
+  outline: 2px rgb(36, 228, 252);
 }
