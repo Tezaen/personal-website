@@ -6,6 +6,8 @@ import Projects from './components/pages/Projects';
 import Jobs from './components/pages/Jobs';
 import Education from './components/pages/Education';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import 'jquery';
+import 'popper.js';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -18,10 +20,9 @@ const App = () => {
     <JobState>
     <ProjectState>
       <Router>
-        <div className="background-img">
+        <div>
           <Navbar />
-          <div className="container">
-          
+          <div className="container" id="bg">
             <Switch>
               <Route exact path='/' component={Home} />
               <Route exact path='/education' component={Education} />
