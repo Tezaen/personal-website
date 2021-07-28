@@ -1,6 +1,4 @@
 import React, { useEffect } from 'react';
-import { Fragment } from 'react';
-import { Card, Row, Col } from 'react-bootstrap';
 
 const Education = () => {
     
@@ -10,46 +8,45 @@ const Education = () => {
     }, []);
 
     return (
-        <div className="non-transparent">
+        <div className="non-transparent pagee">
             <h1 className="text-center display-4 pt-4 pb-4">Education</h1>
-            
             <div className="my-5">
                 <h1 className="text-center">California State University, Monterey Bay</h1>
-                <Row className="lead my-1">
-                    <Col className="text-left mx-2">
+                <div className="row lead my-1">
+                    <div className="col text-left mx-2">
                         <strong>Degree: </strong> Bachelors in Computer Science (Summa Cum Laude)
-                    </Col>
-                    <Col className="text-right mx-2"> 
+                    </div>
+                    <div className="col text-right mx-2"> 
                         <strong>Graduated: </strong>May 2021
-                    </Col>
-                </Row>
-                <Row className="lead my-1">
-                    <Col className="text-left mx-2"> 
+                    </div>
+                </div>
+                <div className="row lead my-1">
+                    <div className="col text-left mx-2"> 
                         <strong>Concentration: </strong> Software Engineering
-                    </Col>
-                    <Col className="text-right mx-2">
+                    </div>
+                    <div className="col text-right mx-2">
                         <strong>GPA: </strong>3.9
-                    </Col>
-                </Row>
+                    </div>
+                </div>
             </div>
-            <div className="my-3">
+            <div className="my-5">
                 <h1 className="text-center">Hartnell Community College</h1>
-                <Row className="lead my-1">
-                    <Col className="text-left mx-2">
+                <div className="row lead my-1">
+                    <div className="col text-left mx-2">
                         <strong>Degree: </strong> Associates in Computer Science
-                    </Col>
-                    <Col className="text-right mx-2"> 
+                    </div>
+                    <div className="col text-right mx-2"> 
                         <strong>Graduated: </strong>May 2020
-                    </Col>
-                </Row>
-                <Row className="lead my-1">
-                    <Col className="text-left mx-2"> 
+                    </div>
+                </div>
+                <div className="row lead my-1">
+                    <div className="col text-left mx-2"> 
                         <strong>Concentration: </strong> Software Engineering
-                    </Col>
-                    <Col className="text-right mx-2">
+                    </div>
+                    <div className="col text-right mx-2">
                         <strong>GPA: </strong>3.9
-                    </Col>
-                </Row>
+                    </div>
+                </div>
             </div>
             <div className="my-3">
                 <h1 className="text-center">CSin3</h1>

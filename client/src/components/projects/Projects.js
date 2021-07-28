@@ -6,7 +6,6 @@ import Spinner from '../layout/Spinner';
 
 const Projects = () => {
     const projectContext = useContext(ProjectContext);
-    console.log(projectContext);
     const { projects, getProjects, loading } = projectContext;
 
     useEffect(() => {
@@ -24,7 +23,7 @@ const Projects = () => {
                     { 
                         projects.map(project => 
                             // <CSSTransition key={project.title} timeout={500} classNames="item">
-                                <ProjectItem project={project} key={project.title}/>
+                                <ProjectItem project={project} key={project.title} />
                             // </CSSTransition>
                         )
                     }

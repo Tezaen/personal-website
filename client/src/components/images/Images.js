@@ -1,7 +1,4 @@
 import React, { useState } from 'react';
-import ImageItem from './ImageItem';
-import { Image } from 'react-bootstrap';
-import { Row, Col, Modal, Button } from 'react-bootstrap';
 
 const Images = ({ images }) => {
     const [fullscreen, setFullscreen] = useState(true);
@@ -19,7 +16,6 @@ const Images = ({ images }) => {
     }
 
     const onClick = (imageUrl) => {
-        console.log("FUCK YOU");
         handleShow(true, imageUrl);
     }
 
@@ -27,31 +23,30 @@ const Images = ({ images }) => {
         <>
             {
                 images !== undefined ? (
-                    <Row>
+                    <div className="row">
                     {
                         images.map( image =>
-                            <Col className="py-3">
-                                <Image 
+                            <div className="col py-3">
+                                <img 
                                     src={ image } 
-                                    className="fluid" 
-                                    rounded
+                                    className="rounded fluid" 
                                     onClick={() => onClick(image)}
                                     style={imageStyle}
                                     />
-                            </Col>
+                            </div>
                         )
                     }
-                    </Row>
+                    </div>
                 ) : <></>
             }
-            <Modal show={show} fullscreen={ true } onHide={() => setShow(false)}>
+            {/* <Modal show={show} fullscreen={ true } onHide={() => setShow(false)}>
                 <Modal.Header closeButton>
                     <Modal.Title>Modal</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <Image src={ url }/>
                 </Modal.Body>
-            </Modal>
+            </Modal> */}
         </>
     )
 }
