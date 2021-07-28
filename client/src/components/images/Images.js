@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import ImageItem from './ImageItem';
 import { Image } from 'react-bootstrap';
 import { Row, Col, Modal, Button } from 'react-bootstrap';
 

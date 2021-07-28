@@ -9,33 +9,33 @@ const JobItem = ({ job }) => {
     const startDateConverted = TimestampToDate(startDate.seconds);
     const endDateConverted = TimestampToDate(endDate.seconds);
     const datePostedConverted = TimestampToDate(datePosted.seconds);
-    console.log(desc);
+    
     return (
-        <Card className="my-2 mx-5">
-            <Card.Body>
+        <div className="card my-2 mx-5">
+            <div className="card-body">
                 <h1 className="text-center">
                     { title }
                 </h1>
-                <Card.Subtitle className="lead my-1">
+                <div className="card-subtitle lead my-1">
                     <strong>Company:</strong> { company }
-                </Card.Subtitle>
-                <Card.Subtitle className="lead my-1">
+                </div>
+                <div className="card-subtitle lead my-1">
                     <strong>Start Date:</strong> { startDateConverted }
-                </Card.Subtitle>
-                <Card.Subtitle className="lead my-1">
+                </div>
+                <div className="card-subtitle lead my-1">
                     <strong>End Date:</strong> { endDateConverted }
-                </Card.Subtitle>
-                <Card.Text dangerouslySetInnerHTML={{__html: desc}}> 
-                </Card.Text>
+                </div>
+                <div className="card-text" dangerouslySetInnerHTML={{__html: desc}}> 
+                </div>
                 {/* <Card.Text> I would actually just use this instead of dangerouslySetInnerHtml
                    { desc }     as it is vulnerable to cross site SCRIPTING (XSS)
                                 maybe use another node package. For now it will stick
                 </Card.Text> */}
-                <Card.Text>
+                <div className="card-text mt-2">
                     Date Posted: { datePostedConverted }
-                </Card.Text>
-            </Card.Body>
-        </Card>
+                </div>
+            </div>
+        </div>
     )
 }
 
