@@ -30,9 +30,14 @@ const App = () => {
               <Route exact path='/jobs' component={Jobs} />
               <Route exact path='/about' component={About} />
             </Switch>
-            
+            <div className="icon-bar">
+              <a href="https://github.com/Tezaen/" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/roober-cruz/" target="_blank" rel="noopener noreferrer"><i className="fa fa-linkedin"></i></a>
+              <a href="mailto:roober.cruz@gmail.com" target="_blank" rel="noopener noreferrer"><i className="fas fa-envelope-square"></i></a>
+            </div>
           </div>
           {/* <Footer /> */}
+          
         </div>
       </Router>
     </ProjectState>
