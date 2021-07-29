@@ -12,7 +12,6 @@ body {
 
 body {
   background-image: url('./components/layout/bg-blue.jpg');
-  z-index: 1 !important;
 }
 
 #root {
@@ -55,4 +54,28 @@ a {
 
 .text-stroke {
   outline: 2px rgb(36, 228, 252);
+}
+
+.icon-bar {
+  left: 0;
+  position: fixed;
+  top: 40%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.6s ease;
+  background-color: white;
+  font-size: 30px;
+}
+
+/* Style the social media icons with color, if you want */
+.icon-bar a:hover {
+  background-color: rgb(36, 228, 252);
+  color: white !important;
 }
