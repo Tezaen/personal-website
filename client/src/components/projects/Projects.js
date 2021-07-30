@@ -19,18 +19,17 @@ const Projects = () => {
 
     return (
         <Fragment>
-            { projects !== null && !loading ? <>  {/* <TransitionGroup></TransitionGroup> */}
-                    { 
-                        projects.map(project => 
-                            // <CSSTransition key={project.title} timeout={500} classNames="item">
-                                <ProjectItem project={project} key={project.title} />
-                            // </CSSTransition>
-                        )
-                    }
-                </> : <Spinner />
+            { projects !== null && !loading ? 
+            <> 
+                { 
+                    projects.map(project => 
+                        <ProjectItem project={project} key={project.title} />    
+                    )
+                }
+            </> : <Spinner />
             }
         </Fragment>
-    ) // projects.map(project => <ProjectItem project={project} />)
+    ) 
 }
 
 export default Projects

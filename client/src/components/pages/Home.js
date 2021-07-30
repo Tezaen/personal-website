@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Picture from '../layout/img/roober_cruz_san_fran.jpg';
 
@@ -9,7 +9,7 @@ const Home = () => {
     }, [])
 
     return (
-        <div className="container">
+        <div className="">
             <div className="non-transparent pagee">
                 <h1 className="text-center display-4 pt-5"><strong>Roober Cruz</strong></h1>
 
