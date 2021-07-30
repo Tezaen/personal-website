@@ -5,6 +5,7 @@ import About from './components/pages/About';
 import Projects from './components/pages/Projects';
 import Jobs from './components/pages/Jobs';
 import Education from './components/pages/Education';
+import SocialMediaBar from './components/layout/SocialMediaBar';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import 'jquery';
 import 'popper.js';
@@ -13,16 +14,24 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import ProjectState from './context/project/ProjectState';
 import JobState from './context/job/JobState';
-
+import { useSpring, animated } from 'react-spring';
 
 const App = () => {
+  const styleProps = useSpring({
+    to: { opacity: 1 },
+    from: { opacity: 0},
+    delay: 400
+  });
+
+
   return (
     <JobState>
     <ProjectState>
       <Router>
-        <div>
+        <animated.div style={styleProps}>
+          <SocialMediaBar />
           <Navbar />
-          <div className="container" id="bg">
+          <div className="container-lg" id="bg">
             <Switch>
               <Route exact path='/' component={Home} />
               <Route exact path='/education' component={Education} />
@@ -30,15 +39,9 @@ const App = () => {
               <Route exact path='/jobs' component={Jobs} />
               <Route exact path='/about' component={About} />
             </Switch>
-            <div className="icon-bar">
-              <a href="https://github.com/Tezaen/" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
-              <a href="https://www.linkedin.com/in/roober-cruz/" target="_blank" rel="noopener noreferrer"><i className="fa fa-linkedin"></i></a>
-              <a href="mailto:roober.cruz@gmail.com" target="_blank" rel="noopener noreferrer"><i className="fas fa-envelope-square"></i></a>
-            </div>
           </div>
           {/* <Footer /> */}
-          
-        </div>
+        </animated.div>
       </Router>
     </ProjectState>
     </JobState>

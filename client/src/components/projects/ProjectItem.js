@@ -47,7 +47,7 @@ const ProjectItem = ({ project }) => {
                     <Carousel  fade>
                         {
                             images.map(image => 
-                                <Carousel.Item>
+                                <Carousel.Item key={image}>
                                     <img src={image} key={image} width="100%" height="100%"/>
                                     <Carousel.Caption>
                                         <h3>{title}</h3>
